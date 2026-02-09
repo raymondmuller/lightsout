@@ -15,7 +15,7 @@ export function generateShareText({ username, stats }) {
       grid += '\n'
     }
   }
-  return `💡 I solved github.com/${username} its Lights Out puzzle!\nScore: ${stats.score} (${stats.moves} moves) in ${stats.time}\n\n${grid}\nCan you beat that?\n ${url}`
+  return `💡 I solved the Lights Out puzzle for github.com/${username}!\nScore: ${stats.score} (${stats.moves} moves) in ${stats.time}\n\n${grid}\nCan you beat that?\n ${url}`
 }
 
 /**
