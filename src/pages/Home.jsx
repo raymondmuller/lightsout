@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import UsernameInput from '../components/UsernameInput'
 
 const BOSS_BATTLES = [
@@ -37,9 +38,9 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {BOSS_BATTLES.map(boss => (
-              <a
+              <Link
                 key={boss.username}
-                href={`/${boss.username}`}
+                to={`/${boss.username}`}
                 className="font-mono p-3 rounded border border-gh-border bg-gh-0 hover:border-gh-4 transition-colors block group"
               >
                 <div className="text-sm">
@@ -48,7 +49,7 @@ export default function Home() {
                 </div>
                 <div className="text-xs text-gh-text-muted mt-1">{boss.desc}</div>
                 <div className="text-xs mt-1 text-gh-4 opacity-70">{boss.difficulty}</div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
