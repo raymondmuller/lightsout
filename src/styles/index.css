@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gh-0: #161b22;
+  --color-gh-4: #39d353;
+  --color-gh-bg: #0d1117;
+  --color-gh-border: #30363d;
+  --color-gh-text: #e6edf3;
+  --color-gh-text-muted: #7d8590;
+}
+
+body {
+  background-color: var(--color-gh-bg);
+  color: var(--color-gh-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Smooth grid transitions */
+.grid-cell {
+  transition: filter 0.15s ease;
+}
+
+.grid-cell.cursor-pointer:hover {
+  filter: brightness(1.5);
+}
+
+/* Fade in animation */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Terminal cursor blink */
+.terminal-cursor {
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
