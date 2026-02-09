@@ -2,7 +2,7 @@
  * Generate shareable text for a game result
  */
 export function generateShareText({ username, stats }) {
-  const url = `lightsout.dev/${username}`
+  const url = `https://lightsout.raymond-muller-1989.workers.dev/${username}`
 
   let grid = ''
   if (stats.sliceWeeks && stats.rows && stats.cols) {
